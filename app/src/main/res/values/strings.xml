@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Учи языки легко</string>
+    <string name="message_file_loading">File being downloaded. (Tap to cancel)</string>
+    <string name="message_download_started">Download of %s started</string>
+    <string name="error_download_failed">Download failed</string>
+    <string name="message_download_success">Downloaded successfully</string>
+    <string name="title_download">Download</string>
+    <string name="title_saved">Saved</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_dictionaries">Dictionaries</string>
+    <string name="title_books">Books</string>
+    <string name="title_languaged_books">%s Books</string>
+    <string name="message_no_items">There are no items in the list</string>
+    <string name="error_reading_book_file">Error reading book file</string>
+    <string name="message_item_deleted">Deleted</string>
+    <string name="key_book">book_%d</string>
+    <string name="key_book_id">book_id</string>
+    <string name="text_page_info">%1$d/%2$d</string>
+    <string name="description_image">Image</string>
+    <string name="title_add_to_my_words">Add to my words</string>
+    <string name="font_name">fonts/Roboto-Regular.ttf</string>
+    <string name="description_add">Add</string>
+    <string name="title_open">Open</string>
+    <string name="description_logo">Logo</string>
+    <string name="description_remove">Remove</string>
+    <string name="description_definition">Definition</string>
+    <string name="message_no_learned_words">You haven\'t learned a word yet.</string>
+    <string name="title_learned_words">Learned words</string>
+    <string name="description_drawer_open">Drawer open</string>
+    <string name="description_drawer_close">Drawer closed</string>
+    <string name="title_store">Store</string>
+    <string name="key_dictionary_id">dictionary_id</string>
+    <string name="title_home">Home</string>
+    <string name="title_sign_in">Sign in</string>
+    <string name="description_account_image">Account image</string>
+    <string name="message_no_definition">No matching found, see adjacent words</string>
+    <string name="title_library">Library</string>
+    <string name="title_device">From device</string>
+    <string name="title_opened">Opened</string>
+    <string name="title_delete">Delete</string>
+    <string name="title_file_picker">Open file</string>
+    <string name="message_access_denied">Access denied</string>
+    <string name="hint_enter_page">Enter page between 1 and %d</string>
+    <string name="message_invalid_page">Invalid page</string>
+    <string name="title_set_page">Go to page</string>
+
+</resources>

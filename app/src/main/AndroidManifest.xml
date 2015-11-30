@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="learn.english.cofriends.reades">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:name="learn.english.cofriends.reades.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="learn.english.cofriends.reades.ui.read.ReadActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="learn.english.cofriends.reades.ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="learn.english.cofriends.reades.ui.books.BooksActivity"
+            android:label="@string/title_books" />
+        <activity
+            android:name="learn.english.cofriends.reades.ui.dictionaries.DictionariesActivity"
+            android:label="@string/title_dictionaries" />
+
+        <service android:name="learn.english.cofriends.reades.service.book.BookDownloadService" />
+        <service android:name="learn.english.cofriends.reades.service.dictionary.DictionaryDownloadService" />
+        <service android:name="learn.english.cofriends.reades.service.dictionary.SavedDictionariesService" />
+        <service android:name="learn.english.cofriends.reades.service.book.SavedBooksService" />
+        <service android:name="learn.english.cofriends.reades.service.SavedWordsService" />
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="reades.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="8" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="learn.english.cofriends.reades" />
+    </application>
+
+</manifest>

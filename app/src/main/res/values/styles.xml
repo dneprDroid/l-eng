@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Reades">
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Reades.Large</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Reades.Large</item>
+        <item name="android:windowBackground">@color/white</item>
+
+        <item name="colorPrimary">@color/indigo</item>
+        <item name="colorPrimaryDark">@color/dark_indigo</item>
+
+        <item name="undoBarStyle">@style/UndoBarClassicStyle</item>
+    </style>
+
+    <style name="ActionBar.Solid.Reades.Large">
+        <item name="android:height">@dimen/action_bar_height</item>
+    </style>
+
+</resources>

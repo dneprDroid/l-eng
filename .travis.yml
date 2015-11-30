@@ -1,0 +1,42 @@
+language: android
+
+android:
+  components:
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    # - platform-tools
+    # - tools
+
+    # The BuildTools version used by your project
+    - build-tools-21.1.2
+
+    # The SDK version used to compile your project
+    - android-21
+
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - extra-android-support
+
+jdk:
+ - oraclejdk7
+
+branches:
+ only:
+ - master
+
+before_install:
+ - chmod +x gradlew
+
+script:
+  - ./gradlew clean check -Dpre-dex=false
+
+notifications:
+  email: false
+
+sudo: true
+
+cache:
+  directories:
+    - $HOME/.gradle

@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+def getAuthToken() {
+    return hasProperty('AUTH_TOKEN') ? AUTH_TOKEN : ''
+}
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "learn.english.cofriends.reades"
+        minSdkVersion 13
+        targetSdkVersion 23
+        versionCode 4
+        versionName "1.3"
+
+        buildConfigField "String", "AUTH_TOKEN", "\"${getAuthToken()}\""
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file("D:\\key.jks")
+            storePassword "gormalla"
+            keyAlias "alias"
+            keyPassword "gormalla"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+
+            versionNameSuffix "dev"
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile project(':libs:mupdf')
+
+    compile 'com.cocosw:undobar:1.8.1@aar'
+
+    compile 'com.google.android.gms:play-services-analytics:8.3.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+
+    compile 'com.loopj.android:android-async-http:1.4.9'
+
+    compile 'com.jakewharton:butterknife:5.1.2'
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    compile 'com.squareup.dagger:dagger-compiler:1.2.2'
+
+    compile 'com.google.code.gson:gson:2.4'
+
+    compile 'com.squareup.okio:okio:1.0.1'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+
+    compile 'com.squareup.picasso:picasso:2.4.0'
+
+    compile 'com.squareup:otto:1.3.6'
+
+    compile 'com.github.satyan:sugar:1.3'
+
+    //Test dependencies
+
+    // Espresso, uncomment before testing
+    androidTestCompile('org.mockito:mockito-core:1.10.19') {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+    androidTestCompile('com.google.dexmaker:dexmaker-mockito:1.0') {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+        exclude group: 'org.mockito', module: 'mockito-core'
+    }
+    androidTestCompile('com.google.dexmaker:dexmaker:1.0')
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0') {
+        exclude group: 'javax.inject'
+        exclude group: 'com.squareup'
+    }
+    androidTestCompile('com.android.support.test:testing-support-lib:0.1')
+}
