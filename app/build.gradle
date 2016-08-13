@@ -20,14 +20,6 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    signingConfigs {
-        release {
-            storeFile file("D:\\key.jks")
-            storePassword "gormalla"
-            keyAlias "alias"
-            keyPassword "gormalla"
-        }
-    }
     buildTypes {
         release {
             minifyEnabled false
